@@ -16,23 +16,15 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  totalNodes:
-                    type: integer
-                    description: Total number of Bitcoin nodes
-                  totalCountries:
-                    type: integer
-                    description: Total number of countries with Bitcoin nodes
-                  nodesDistribution:
-                    type: object
-                    additionalProperties:
-                      type: integer
-                    description: Distribution of nodes by country
-                  versionDistribution:
-                    type: object
-                    additionalProperties:
-                      type: integer
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            network:
+              type: array
+              items:
+                $ref: '#/components/schemas/NetworkStatistic'
                     description: Distribution of nodes by Bitcoin version
         '400':
           description: Bad request
