@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Bitaps Node IP API
+  version: 1.0.0
+  description: API for accessing Bitcoin node statistics
+servers:
+  - url: https://api.bitaps.com/btc/v1/nodes
+paths:
+  /statistic:
+    get:
+      summary: Get Bitcoin node statistics
+      operationId: getNodesStatistic
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalNodes:
+                    type: integer
+                    description: Total number of Bitcoin nodes
+                  totalCountries:
+                    type: integer
+                    description: Total number of countries with Bitcoin nodes
+                  nodesDistribution:
+                    type: object
+                    additionalProperties:
+                      type: integer
+                    description: Distribution of nodes by country
+                  versionDistribution:
+                    type: object
+                    additionalProperties:
+                      type: integer
+                    description: Distribution of nodes by Bitcoin version
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
