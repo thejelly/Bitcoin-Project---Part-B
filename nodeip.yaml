@@ -25,10 +25,4 @@ paths:
                         type: array
                         items:
                           type: object
-                          properties:
-                            IPv4:
-                              type: integer
-                            IPv6:
-                              type: integer
-                            TOR:
-                              type: integer
+                          
