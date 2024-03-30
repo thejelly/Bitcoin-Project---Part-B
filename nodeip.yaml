@@ -23,5 +23,3 @@ paths:
                     properties:
                       network:
                         type: array
-                        items:
-                          type: object
