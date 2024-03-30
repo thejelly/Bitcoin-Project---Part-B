@@ -23,4 +23,13 @@ paths:
                     properties:
                       network:
                         type: array
-                        items: object
+                        items:
+                          
+      type: object
+      properties:
+        IPv4:
+          type: integer
+        IPv6:
+          type: integer
+        TOR:
+          type: integer
