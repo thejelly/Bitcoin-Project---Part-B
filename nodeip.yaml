@@ -23,8 +23,7 @@ paths:
                     properties:
                       network:
                         type: array
-                        items:
-                          
+                        items:     
       type: object
       properties:
         IPv4:
