@@ -16,12 +16,12 @@ paths:
           content:
             application/json:
               schema:
-      type: object
-      properties:
-        data:
-          type: object
-          properties:
-            network:
-              type: array
-              items:
                 type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      network:
+                        type: array
+                        items:
+                          type: object
