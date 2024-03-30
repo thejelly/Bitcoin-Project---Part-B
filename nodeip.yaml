@@ -24,7 +24,9 @@ paths:
             network:
               type: array
               items:
-                $ref: '#/components/schemas/NetworkStatistic'
+                type: object
+      additionalProperties:
+        type: integer
                     description: Distribution of nodes by Bitcoin version
         '400':
           description: Bad request
